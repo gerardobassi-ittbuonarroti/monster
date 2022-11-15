@@ -20,14 +20,4 @@ public class Monster {
         return vita;
     }
 
-    public int difesa(int danni){
-        if(puntiferita<danni){
-            puntiferita = 0;
-        } else{
-            puntiferita = puntiferita - danni;
-        }
-        return puntiferita;
-    }
-
-    
 }
