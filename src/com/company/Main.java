@@ -26,6 +26,10 @@ public class Main {
         Monster m2 = new Monster(nome, vita, danni);
 
         System.out.print("siccome "+nome+" è pacifico, non potrà attaccare, ma essendo molto veloce una volta attaccato, se non ferito mortalmente scapperà, per il primo mostro è necessario fare un attacco potente");
-        
+        if(m1.attacco(vita) == 0){
+            System.out.print(nome + " è stato sconfitto");
+        } else{
+            System.out.print(nome + " è riuscito a fuggire");
+        }
     }
 }
