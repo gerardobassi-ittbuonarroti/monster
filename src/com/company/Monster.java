@@ -4,6 +4,7 @@ public class Monster {
     private String nome;
     private int puntiferita;
     private int danno;
+    private Arma arma;
 
     Monster(String nome, int puntiferita, int danno){
         this.nome = nome;
