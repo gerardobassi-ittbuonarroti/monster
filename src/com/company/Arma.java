@@ -8,4 +8,8 @@ public class Arma {
         this.nome = nome;
         this.danni = danni;
     }
+
+    public int getDanni(){
+        return danni;
+    }
 }

@@ -13,12 +13,28 @@ public class Monster {
     }
 
     public int attacco(int vita){
-        if(danno>vita){
-            vita = 0;
+        if(arma == null){
+            if(danno>vita){
+                puntiferita = 0;
+            } else{
+                puntiferita = vita - danno;
+            }
         } else{
-            vita = vita-danno;
+            if((danno+arma.getDanni())>vita){
+                puntiferita = 0;
+            } else{
+                puntiferita = puntiferita - danno-arma.getDanni();
+            }
         }
-        return vita;
+        return puntiferita;
+    }
+
+    public void raccogli(Arma arma){
+        this.arma = arma;
+    }
+
+    public void lascia(){
+        arma = null;
     }
 
 }
